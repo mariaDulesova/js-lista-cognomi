@@ -25,3 +25,9 @@ console.log(cognomiArray);
 // 4. scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova
 var cognomeUtentePosizione = cognomiArray.indexOf(cognomeUtente) + 1;
 console.log("La posizione del utente:", cognomeUtentePosizione);
+
+for (var i=0; i < cognomiArray.length; i++) {
+    console.log(i+1,cognomiArray[i]);
+    document.getElementById("lista-cognomi").innerHTML+= "<li>"+cognomiArray[i]+"</li>";
+}
+
