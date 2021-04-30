@@ -14,8 +14,10 @@ while (!isNaN(cognomeUtente)){
     var cognomeUtente = prompt("Inserisci il tuo cognome:");
 }
 
+var cognomeUtenteCapitalized = cognomeUtente.charAt(0).toUpperCase() + cognomeUtente.slice(1)
+
 // 2. inseriscilo in un array con altri cognomi: 'Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli'
-cognomiArray.push(cognomeUtente);
+cognomiArray.push(cognomeUtenteCapitalized);
 console.log(cognomiArray);
 
 // 3. stampa la lista ordinata alfabeticamente
@@ -23,11 +25,14 @@ cognomiArray = cognomiArray.sort();
 console.log(cognomiArray);
 
 // 4. scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova
-var cognomeUtentePosizione = cognomiArray.indexOf(cognomeUtente) + 1;
+var cognomeUtentePosizione = cognomiArray.indexOf(cognomeUtenteCapitalized) + 1;
 console.log("La posizione del utente:", cognomeUtentePosizione);
 
 for (var i=0; i < cognomiArray.length; i++) {
     console.log(i+1,cognomiArray[i]);
     document.getElementById("lista-cognomi").innerHTML+= "<li>"+cognomiArray[i]+"</li>";
 }
+
+
+
 
