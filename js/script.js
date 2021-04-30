@@ -19,7 +19,7 @@ cognomiArray.push(cognomeUtente);
 console.log(cognomiArray);
 
 // 3. stampa la lista ordinata alfabeticamente
-var cognomiArray = cognomiArray.sort();
+cognomiArray = cognomiArray.sort();
 console.log(cognomiArray);
 
 // 4. scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova
