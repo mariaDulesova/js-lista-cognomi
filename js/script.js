@@ -10,6 +10,10 @@ var cognomiArray = ["Bianchi", "Neri" , "Rossi", "Verdi", "Gialli"];
 var cognomeUtente = prompt("Inserisci il tuo cognome:");
 console.log(cognomeUtente);
 
+while (!isNaN(cognomeUtente)){
+    var cognomeUtente = prompt("Inserisci il tuo cognome:");
+}
+
 // 2. inseriscilo in un array con altri cognomi: 'Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli'
 cognomiArray.push(cognomeUtente);
 console.log(cognomiArray);
@@ -19,3 +23,5 @@ var cognomiArrayOrdinata = cognomiArray.sort();
 console.log(cognomiArrayOrdinata);
 
 // 4. scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova
+var cognomeUtentePosizione = cognomiArrayOrdinata.indexOf(cognomeUtente) + 1;
+console.log("La posizione del utente:", cognomeUtentePosizione);
